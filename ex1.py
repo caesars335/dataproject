@@ -52,7 +52,7 @@ def get_input():
 df = get_input()
 st.write(df)
 
-data_sample = pd.read_csv('new_sample_tcas.xlsx')
+data_sample = pd.read_csv('new_sample_tcas.xlsx', encoding='latin-1')
 df = pd.concat([df, data_sample],axis=0)
 
 cat_data = pd.get_dummies(df[['Sex']])
